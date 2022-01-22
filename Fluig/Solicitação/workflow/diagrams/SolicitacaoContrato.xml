@@ -1,0 +1,1276 @@
+<list>
+  <ProcessDefinition>
+    <processDefinitionPK>
+      <companyId>1</companyId>
+      <processId>SolicitacaoContrato</processId>
+    </processDefinitionPK>
+    <processDescription>Solicitação de Contrato</processDescription>
+    <instruction></instruction>
+    <active>true</active>
+    <publicProcess>false</publicProcess>
+    <volumeId>Default</volumeId>
+    <categoryId>Juridico</categoryId>
+    <managerEngineAllocationId>Grupo</managerEngineAllocationId>
+    <managerEngineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;assessoria_juridica&lt;/Group&gt;&lt;/AssignmentController&gt;</managerEngineAllocationConfiguration>
+    <snapshotFrequency>0</snapshotFrequency>
+    <baseDay>0</baseDay>
+    <baseMonth>0</baseMonth>
+    <periodId>Default</periodId>
+    <keyWord></keyWord>
+    <uniqueCardVersion>false</uniqueCardVersion>
+    <complementsLevel>1</complementsLevel>
+    <notifyRequisitionerComplements>true</notifyRequisitionerComplements>
+    <notifyManagerComplements>false</notifyManagerComplements>
+    <notifyAuthorityComplements>true</notifyAuthorityComplements>
+    <deadlineTime>0</deadlineTime>
+    <warningDeadlineTime>0</warningDeadlineTime>
+  </ProcessDefinition>
+  <ProcessDefinitionVersion>
+    <processDefinitionVersionPK>
+      <companyId>1</companyId>
+      <processId>SolicitacaoContrato</processId>
+      <version>29</version>
+    </processDefinitionVersionPK>
+    <versionDescription>Processo de contratos agora é executado pelo próprio solicitante</versionDescription>
+    <formId>12805</formId>
+    <editionMode>false</editionMode>
+    <updateAttachmentsVersion>false</updateAttachmentsVersion>
+    <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
+    <active>true</active>
+    <blockedVersion>false</blockedVersion>
+    <counterSign>false</counterSign>
+    <processDiagram>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;stroke-dasharray:none; shape-rendering:auto; font-family:&apos;Arial&apos;; text-rendering:auto; fill-opacity:1; color-interpolation:auto; color-rendering:auto; font-size:12; fill:black; stroke:black; image-rendering:auto; stroke-miterlimit:10; stroke-linecap:square; stroke-linejoin:miter; font-style:normal; stroke-width:1; stroke-dashoffset:0; font-weight:normal; stroke-opacity:1;&quot; contentScriptType=&quot;text/ecmascript&quot; preserveAspectRatio=&quot;xMidYMid meet&quot; zoomAndPan=&quot;magnify&quot; version=&quot;1.0&quot; contentStyleType=&quot;text/css&quot; xml:xlink=&quot;http://www.w3.org/1999/xlink&quot; width=&quot;1441&quot; height=&quot;761&quot;&gt;&lt;rect x=&quot;10&quot; y=&quot;10&quot; width=&quot;1431&quot; height=&quot;751&quot; ry=&quot;0&quot; rx=&quot;0&quot; style=&quot;stroke:#000000; fill:#FFFFFF&quot; /&gt;&lt;rect x=&quot;40&quot; y=&quot;260&quot; width=&quot;1401&quot; height=&quot;250&quot; ry=&quot;0&quot; rx=&quot;0&quot; style=&quot;stroke:#000000; fill:#ADC9AC&quot; /&gt;&lt;g componentSequence=&quot;78&quot;&gt;&lt;text x=&quot;-385&quot; y=&quot;47&quot; transform=&quot;rotate(270)&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:bold;font-size:10px;stroke:none; fill:#434343&quot;&gt;&lt;tspan dy=&quot;14&quot; x=&quot;-385&quot;&gt;Assessora de Administração&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;rect x=&quot;40&quot; y=&quot;510&quot; width=&quot;1401&quot; height=&quot;251&quot; ry=&quot;0&quot; rx=&quot;0&quot; style=&quot;stroke:#000000; fill:#82B0B7&quot; /&gt;&lt;g componentSequence=&quot;3&quot;&gt;&lt;text x=&quot;-635&quot; y=&quot;47&quot; transform=&quot;rotate(270)&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:bold;font-size:10px;stroke:none; fill:#434343&quot;&gt;&lt;tspan dy=&quot;14&quot; x=&quot;-635&quot;&gt;Jurídico&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;rect x=&quot;40&quot; y=&quot;10&quot; width=&quot;1401&quot; height=&quot;250&quot; ry=&quot;0&quot; rx=&quot;0&quot; style=&quot;stroke:#000000; fill:#9F9F9F&quot; /&gt;&lt;g componentSequence=&quot;2&quot;&gt;&lt;text x=&quot;-135&quot; y=&quot;47&quot; transform=&quot;rotate(270)&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:bold;font-size:10px;stroke:none; fill:#434343&quot;&gt;&lt;tspan dy=&quot;14&quot; x=&quot;-135&quot;&gt;Comprador&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g componentSequence=&quot;1&quot;&gt;&lt;text x=&quot;-385&quot; y=&quot;17&quot; transform=&quot;rotate(270)&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:bold;font-size:10px;stroke:none; fill:#434343&quot;&gt;&lt;tspan dy=&quot;14&quot; x=&quot;-385&quot;&gt;Solicitação de Contrato&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g sequence=&quot;4&quot;&gt;&lt;ellipse cx=&quot;127&quot; cy=&quot;139&quot; rx=&quot;17&quot; ry=&quot;17&quot; stroke-width=&quot;1&quot; style=&quot;fill:url(#linearGradient66FF6696FF96B6FFB6_30992761);&quot; stroke=&quot;336633&quot; /&gt;&lt;/g&gt;&lt;g sequence=&quot;10&quot;&gt;&lt;rect x=&quot;420&quot; y=&quot;107&quot; width=&quot;106&quot; height=&quot;70&quot; ry=&quot;5&quot; rx=&quot;5&quot; style=&quot;fill:url(#linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9_18810034);&quot; stroke=&quot;191970&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;10&quot;&gt;&lt;text x=&quot;473&quot; y=&quot;122&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:bold;font-size:10px;stroke:none; fill:#333399&quot;&gt;&lt;tspan dy=&quot;14&quot; x=&quot;473&quot;&gt;Gerar&lt;/tspan&gt;&lt;tspan dy=&quot;14&quot; x=&quot;473&quot;&gt;documento&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g sequence=&quot;18&quot;&gt;&lt;rect x=&quot;880&quot; y=&quot;110&quot; width=&quot;106&quot; height=&quot;70&quot; ry=&quot;5&quot; rx=&quot;5&quot; style=&quot;fill:url(#linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9_18907657);&quot; stroke=&quot;191970&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;18&quot;&gt;&lt;text x=&quot;933&quot; y=&quot;125&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:bold;font-size:10px;stroke:none; fill:#333399&quot;&gt;&lt;tspan dy=&quot;14&quot; x=&quot;933&quot;&gt;Aguardar&lt;/tspan&gt;&lt;tspan dy=&quot;14&quot; x=&quot;933&quot;&gt;assinatura&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g sequence=&quot;24&quot;&gt;&lt;ellipse cx=&quot;1407&quot; cy=&quot;137&quot; rx=&quot;17&quot; ry=&quot;17&quot; stroke-width=&quot;3&quot; style=&quot;fill:url(#linearGradientFF6666FF9696FFB6B6_2231945);&quot; stroke=&quot;993333&quot; /&gt;&lt;/g&gt;&lt;g sequence=&quot;37&quot;&gt;&lt;polygon points=&quot; 1080 120 1110 90 1140 120 1110 150 1080 120&quot; style=&quot;fill:url(#linearGradientFAFBFCFFFFCC_15447701);&quot; stroke=&quot;000000&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;37&quot;&gt;&lt;text x=&quot;1110&quot; y=&quot;160&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:bold;font-size:10px;stroke:none; fill:#333399&quot;&gt;&lt;tspan dy=&quot;14&quot; x=&quot;1110&quot;&gt;Assinad&lt;/tspan&gt;&lt;tspan dy=&quot;14&quot; x=&quot;1110&quot;&gt;o?&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g sequence=&quot;51&quot;&gt;&lt;rect x=&quot;230&quot; y=&quot;107&quot; width=&quot;106&quot; height=&quot;70&quot; ry=&quot;5&quot; rx=&quot;5&quot; style=&quot;fill:url(#linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9_20584878);&quot; stroke=&quot;191970&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;51&quot;&gt;&lt;text x=&quot;283&quot; y=&quot;122&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:bold;font-size:10px;stroke:none; fill:#333399&quot;&gt;&lt;tspan dy=&quot;14&quot; x=&quot;283&quot;&gt;Configurar tipo&lt;/tspan&gt;&lt;tspan dy=&quot;14&quot; x=&quot;283&quot;&gt;de contrato&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g sequence=&quot;57&quot;&gt;&lt;rect x=&quot;1210&quot; y=&quot;100&quot; width=&quot;106&quot; height=&quot;70&quot; ry=&quot;5&quot; rx=&quot;5&quot; style=&quot;fill:url(#linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9_1703690);&quot; stroke=&quot;191970&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;57&quot;&gt;&lt;text x=&quot;1263&quot; y=&quot;124&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:bold;font-size:10px;stroke:none; fill:#333399&quot;&gt;&lt;tspan dy=&quot;14&quot; x=&quot;1263&quot;&gt;Anexar contrato&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g sequence=&quot;64&quot;&gt;&lt;ellipse cx=&quot;1177&quot; cy=&quot;217&quot; rx=&quot;17&quot; ry=&quot;17&quot; stroke-width=&quot;3&quot; style=&quot;fill:url(#linearGradientFF6666FF9696FFB6B6_913862);&quot; stroke=&quot;993333&quot; /&gt;&lt;/g&gt;&lt;g sequence=&quot;66&quot;&gt;&lt;rect x=&quot;740&quot; y=&quot;600&quot; width=&quot;106&quot; height=&quot;70&quot; ry=&quot;5&quot; rx=&quot;5&quot; style=&quot;fill:url(#linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9_17278476);&quot; stroke=&quot;191970&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;66&quot;&gt;&lt;text x=&quot;793&quot; y=&quot;624&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:bold;font-size:10px;stroke:none; fill:#333399&quot;&gt;&lt;tspan dy=&quot;14&quot; x=&quot;793&quot;&gt;Realizar parecer&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g sequence=&quot;73&quot;&gt;&lt;rect x=&quot;600&quot; y=&quot;107&quot; width=&quot;106&quot; height=&quot;70&quot; ry=&quot;5&quot; rx=&quot;5&quot; style=&quot;fill:url(#linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9_12788779);&quot; stroke=&quot;191970&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;73&quot;&gt;&lt;text x=&quot;653&quot; y=&quot;122&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:bold;font-size:10px;stroke:none; fill:#333399&quot;&gt;&lt;tspan dy=&quot;14&quot; x=&quot;653&quot;&gt;Realizar upload&lt;/tspan&gt;&lt;tspan dy=&quot;14&quot; x=&quot;653&quot;&gt;do documento&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g sequence=&quot;73&quot;&gt;&lt;image x=&quot;605&quot; y=&quot;112&quot; width=&quot;16&quot; height=&quot;16&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:type=&quot;simple&quot; xlink:actuate=&quot;onLoad&quot; xlink:show=&quot;embed&quot; preserveAspectRatio=&quot;none&quot; xlink:href=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB0ElEQVR42sWTQWsTURSFBytiQahCNeDWRQUjxSqYLruoWFFx4UJd9Ee4VHBTd4oiRagLF24LbgShlipoTGOSTk2G1jRRWw1tbUrShCbTOpO0n2eSSLSuioVeODNv3rv3u+c93hiA8T8ydgTQ3dNrGxpuVzVA19nu3KJG3zYgXYFpB+JSrFTl4fPXvJovEnHhwzpEpKANoz/hUdDiZOepEcMjlQQob0KxCnklK4ebt+5g7DlA4NwV5gXOCJpR4Zwgn5U3PB7/7cTAVndng1pUN+vvFy9HOHrMz+2791E+q3oUBcpLBX2PRhNNQFmLuTVwGxAvCoUCDwaHGLg3SGbhR22uIrjbaBCa+MNBWYXL8r2kvagBruNwvKNDiy3Sfq5e72drxMzJv7fgOVhYhaz2GZv6is/no2XvPlrb2rl2419AdMJsAtZkK79ed7AswFg0qRM+TfvhI7QdPMTQs2E0TUkHaTt1QDAcbQK88CDeIa24npMKIWuOzq4z9PT2kVXRkhpkpZzGHiMYaQBO+P2LiU9pYlaS8Mck701pMkUo8YU3kWnGrVneminemTOanyEcT2Glv/P4yVPO913I1W5iIBAY2+4tvHjpsr1z/8KuAn4Bmj3a16FpBDUAAAAASUVORK5CYII=&quot; /&gt;&lt;/g&gt;&lt;g sequence=&quot;79&quot;&gt;&lt;rect x=&quot;740&quot; y=&quot;300&quot; width=&quot;106&quot; height=&quot;70&quot; ry=&quot;5&quot; rx=&quot;5&quot; style=&quot;fill:url(#linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9_4403058);&quot; stroke=&quot;191970&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;79&quot;&gt;&lt;text x=&quot;793&quot; y=&quot;324&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:bold;font-size:10px;stroke:none; fill:#333399&quot;&gt;&lt;tspan dy=&quot;14&quot; x=&quot;793&quot;&gt;Validar contrato&lt;/tspan&gt;&lt;/text&gt;&lt;/g&gt;&lt;g componentSequence=&quot;38&quot;&gt;&lt;text x=&quot;1043&quot; y=&quot;142&quot; style=&quot;font-size:10px;font-weight:none;stroke:none; fill:#333399&quot; text-anchor=&quot;left&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;41&quot;&gt;&lt;text x=&quot;1161&quot; y=&quot;187&quot; style=&quot;font-size:10px;font-weight:none;stroke:none; fill:#333399&quot; text-anchor=&quot;left&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;52&quot;&gt;&lt;text x=&quot;197&quot; y=&quot;140&quot; style=&quot;font-size:10px;font-weight:none;stroke:none; fill:#333399&quot; text-anchor=&quot;left&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;53&quot;&gt;&lt;text x=&quot;388&quot; y=&quot;142&quot; style=&quot;font-size:10px;font-weight:none;stroke:none; fill:#333399&quot; text-anchor=&quot;left&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;59&quot;&gt;&lt;text x=&quot;1363&quot; y=&quot;136&quot; style=&quot;font-size:10px;font-weight:none;stroke:none; fill:#333399&quot; text-anchor=&quot;left&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;60&quot;&gt;&lt;text x=&quot;1185&quot; y=&quot;138&quot; style=&quot;font-size:10px;font-weight:none;stroke:none; fill:#333399&quot; text-anchor=&quot;left&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;62&quot;&gt;&lt;text x=&quot;1366&quot; y=&quot;86&quot; style=&quot;font-size:10px;font-weight:none;stroke:none; fill:#333399&quot; text-anchor=&quot;left&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;74&quot;&gt;&lt;text x=&quot;573&quot; y=&quot;142&quot; style=&quot;font-size:10px;font-weight:none;stroke:none; fill:#333399&quot; text-anchor=&quot;left&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;80&quot;&gt;&lt;text x=&quot;802&quot; y=&quot;176&quot; style=&quot;font-size:10px;font-weight:none;stroke:none; fill:#333399&quot; text-anchor=&quot;left&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;81&quot;&gt;&lt;text x=&quot;537&quot; y=&quot;334&quot; style=&quot;font-size:10px;font-weight:none;stroke:none; fill:#333399&quot; text-anchor=&quot;left&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;82&quot;&gt;&lt;text x=&quot;803&quot; y=&quot;485&quot; style=&quot;font-size:10px;font-weight:none;stroke:none; fill:#333399&quot; text-anchor=&quot;left&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;83&quot;&gt;&lt;text x=&quot;482&quot; y=&quot;540&quot; style=&quot;font-size:10px;font-weight:none;stroke:none; fill:#333399&quot; text-anchor=&quot;left&quot; /&gt;&lt;/g&gt;&lt;g componentSequence=&quot;84&quot;&gt;&lt;text x=&quot;942&quot; y=&quot;450&quot; style=&quot;font-size:10px;font-weight:none;stroke:none; fill:#333399&quot; text-anchor=&quot;left&quot; /&gt;&lt;/g&gt;&lt;path style=&quot;fill:none; stroke:#000000;stroke-width:1&quot; d=&quot;M144.0 139.0 L229.0 141.0&quot; /&gt;&lt;polygon style=&quot;fill:#000000; stroke:#000000;&quot; points=&quot; 219 136 229 141 219 146 221 141&quot; /&gt;&lt;path style=&quot;fill:none; stroke:#F00000;stroke-width:1&quot; d=&quot;M526.0 142.0 L599.0 142.0&quot; /&gt;&lt;polygon style=&quot;fill:#F00000; stroke:#F00000;&quot; points=&quot; 589 137 599 142 589 147 591 142&quot; /&gt;&lt;polygon style=&quot;fill:#F00000; stroke:#F00000;&quot; points=&quot; 536 147 526 142 536 137 534 142&quot; /&gt;&lt;path style=&quot;fill:none; stroke:#F00000;stroke-width:1&quot; d=&quot;M336.0 142.0 L419.0 142.0&quot; /&gt;&lt;polygon style=&quot;fill:#F00000; stroke:#F00000;&quot; points=&quot; 409 137 419 142 409 147 411 142&quot; /&gt;&lt;polygon style=&quot;fill:#F00000; stroke:#F00000;&quot; points=&quot; 346 147 336 142 346 137 344 142&quot; /&gt;&lt;path style=&quot;fill:none; stroke:#000000;stroke-width:1&quot; d=&quot;M739.0 334.0 L472.0 334.0 L472.0 177.0&quot; /&gt;&lt;polygon style=&quot;fill:#000000; stroke:#000000;&quot; points=&quot; 467 187 472 177 477 187 472 185&quot; /&gt;&lt;path style=&quot;fill:none; stroke:#000000;stroke-width:1&quot; d=&quot;M739.0 635.0 L472.0 636.0 L472.0 177.0&quot; /&gt;&lt;polygon style=&quot;fill:#000000; stroke:#000000;&quot; points=&quot; 467 187 472 177 477 187 472 185&quot; /&gt;&lt;path style=&quot;fill:none; stroke:#000000;stroke-width:1&quot; d=&quot;M986.0 143.0 L1079.0 141.0&quot; /&gt;&lt;polygon style=&quot;fill:#000000; stroke:#000000;&quot; points=&quot; 1069 136 1079 141 1069 146 1071 141&quot; /&gt;&lt;path style=&quot;fill:none; stroke:#000000;stroke-width:1&quot; d=&quot;M846.0 634.0 L932.0 633.0 L932.0 180.0&quot; /&gt;&lt;polygon style=&quot;fill:#000000; stroke:#000000;&quot; points=&quot; 927 190 932 180 937 190 932 188&quot; /&gt;&lt;polygon style=&quot;fill:#000000; stroke:#000000;&quot; points=&quot; 851 629 861 639&quot; /&gt;&lt;path style=&quot;fill:none; stroke:#000000;stroke-width:1&quot; d=&quot;M1316.0 135.0 L1390.0 137.0&quot; /&gt;&lt;polygon style=&quot;fill:#000000; stroke:#000000;&quot; points=&quot; 1380 132 1390 137 1380 142 1382 137&quot; /&gt;&lt;polygon style=&quot;fill:#000000; stroke:#000000;&quot; points=&quot; 1321 130 1331 140&quot; /&gt;&lt;path style=&quot;fill:none; stroke:#009600;stroke-width:1&quot; d=&quot;M1316.0 104.0 L1352.0 83.0 L1395.0 125.0&quot; /&gt;&lt;polygon style=&quot;fill:#009600; stroke:#009600;&quot; points=&quot; 1391 114 1395 125 1384 122 1389 119&quot; /&gt;&lt;path style=&quot;fill:none; stroke:#000000;stroke-width:1&quot; d=&quot;M1140.0 175.0 L1166.0 204.0&quot; /&gt;&lt;polygon style=&quot;fill:#000000; stroke:#000000;&quot; points=&quot; 1163 193 1166 204 1156 200 1161 198&quot; /&gt;&lt;path style=&quot;fill:none; stroke:#000000;stroke-width:1&quot; d=&quot;M1140.0 139.0 L1209.0 137.0&quot; /&gt;&lt;polygon style=&quot;fill:#000000; stroke:#000000;&quot; points=&quot; 1199 132 1209 137 1199 142 1201 137&quot; /&gt;&lt;path style=&quot;fill:none; stroke:#000000;stroke-width:1&quot; d=&quot;M793.0 370.0 L793.0 599.0&quot; /&gt;&lt;polygon style=&quot;fill:#000000; stroke:#000000;&quot; points=&quot; 798 589 793 599 788 589 793 591&quot; /&gt;&lt;polygon style=&quot;fill:#000000; stroke:#000000;&quot; points=&quot; 798 375 788 385&quot; /&gt;&lt;path style=&quot;fill:none; stroke:#000000;stroke-width:1&quot; d=&quot;M706.0 141.0 L792.0 140.0 L792.0 299.0&quot; /&gt;&lt;polygon style=&quot;fill:#000000; stroke:#000000;&quot; points=&quot; 797 289 792 299 787 289 792 291&quot; /&gt;&lt;defs&gt;&lt;linearGradient xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;#linearGradient66FF6696FF96B6FFB6&quot; id=&quot;linearGradient66FF6696FF96B6FFB6_30992761&quot; x1=&quot;0&quot; y1=&quot;122.0&quot; x2=&quot;0&quot; y2=&quot;157.0&quot; gradientUnits=&quot;userSpaceOnUse&quot; xlink:type=&quot;simple&quot; xlink:actuate=&quot;onLoad&quot; xlink:show=&quot;other&quot; /&gt;&lt;linearGradient id=&quot;linearGradient66FF6696FF96B6FFB6&quot;&gt;&lt;stop style=&quot;stop-color:#66FF66;stop-opacity:1;&quot; offset=&quot;0.0&quot; id=&quot;stop66FF66&quot; /&gt;&lt;stop style=&quot;stop-color:#96FF96;stop-opacity:1;&quot; offset=&quot;0.5&quot; id=&quot;stop96FF96&quot; /&gt;&lt;stop style=&quot;stop-color:#B6FFB6;stop-opacity:1;&quot; offset=&quot;1.0&quot; id=&quot;stopB6FFB6&quot; /&gt;&lt;/linearGradient&gt;&lt;linearGradient xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;#linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9&quot; id=&quot;linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9_18810034&quot; x1=&quot;0&quot; y1=&quot;107.0&quot; x2=&quot;0&quot; y2=&quot;213.0&quot; gradientUnits=&quot;userSpaceOnUse&quot; xlink:type=&quot;simple&quot; xlink:actuate=&quot;onLoad&quot; xlink:show=&quot;other&quot; /&gt;&lt;linearGradient id=&quot;linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9&quot;&gt;&lt;stop style=&quot;stop-color:#F8FBFE;stop-opacity:1;&quot; offset=&quot;0.0&quot; id=&quot;stopF8FBFE&quot; /&gt;&lt;stop style=&quot;stop-color:#EDF5FC;stop-opacity:1;&quot; offset=&quot;0.25&quot; id=&quot;stopEDF5FC&quot; /&gt;&lt;stop style=&quot;stop-color:#DEEDFA;stop-opacity:1;&quot; offset=&quot;0.5&quot; id=&quot;stopDEEDFA&quot; /&gt;&lt;stop style=&quot;stop-color:#D4E7F8;stop-opacity:1;&quot; offset=&quot;0.75&quot; id=&quot;stopD4E7F8&quot; /&gt;&lt;stop style=&quot;stop-color:#E2E5E9;stop-opacity:1;&quot; offset=&quot;1.0&quot; id=&quot;stopE2E5E9&quot; /&gt;&lt;/linearGradient&gt;&lt;linearGradient xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;#linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9&quot; id=&quot;linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9_18907657&quot; x1=&quot;0&quot; y1=&quot;110.0&quot; x2=&quot;0&quot; y2=&quot;216.0&quot; gradientUnits=&quot;userSpaceOnUse&quot; xlink:type=&quot;simple&quot; xlink:actuate=&quot;onLoad&quot; xlink:show=&quot;other&quot; /&gt;&lt;linearGradient xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;#linearGradientFF6666FF9696FFB6B6&quot; id=&quot;linearGradientFF6666FF9696FFB6B6_2231945&quot; x1=&quot;0&quot; y1=&quot;120.0&quot; x2=&quot;0&quot; y2=&quot;155.0&quot; gradientUnits=&quot;userSpaceOnUse&quot; xlink:type=&quot;simple&quot; xlink:actuate=&quot;onLoad&quot; xlink:show=&quot;other&quot; /&gt;&lt;linearGradient id=&quot;linearGradientFF6666FF9696FFB6B6&quot;&gt;&lt;stop style=&quot;stop-color:#FF6666;stop-opacity:1;&quot; offset=&quot;0.0&quot; id=&quot;stopFF6666&quot; /&gt;&lt;stop style=&quot;stop-color:#FF9696;stop-opacity:1;&quot; offset=&quot;0.5&quot; id=&quot;stopFF9696&quot; /&gt;&lt;stop style=&quot;stop-color:#FFB6B6;stop-opacity:1;&quot; offset=&quot;1.0&quot; id=&quot;stopFFB6B6&quot; /&gt;&lt;/linearGradient&gt;&lt;linearGradient xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;#linearGradientFAFBFCFFFFCC&quot; id=&quot;linearGradientFAFBFCFFFFCC_15447701&quot; x1=&quot;0&quot; y1=&quot;90.0&quot; x2=&quot;0&quot; y2=&quot;150.0&quot; gradientUnits=&quot;userSpaceOnUse&quot; xlink:type=&quot;simple&quot; xlink:actuate=&quot;onLoad&quot; xlink:show=&quot;other&quot; /&gt;&lt;linearGradient id=&quot;linearGradientFAFBFCFFFFCC&quot;&gt;&lt;stop style=&quot;stop-color:#FAFBFC;stop-opacity:1;&quot; offset=&quot;0.0&quot; id=&quot;stopFAFBFC&quot; /&gt;&lt;stop style=&quot;stop-color:#FFFFCC;stop-opacity:1;&quot; offset=&quot;1.0&quot; id=&quot;stopFFFFCC&quot; /&gt;&lt;/linearGradient&gt;&lt;linearGradient xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;#linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9&quot; id=&quot;linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9_20584878&quot; x1=&quot;0&quot; y1=&quot;107.0&quot; x2=&quot;0&quot; y2=&quot;213.0&quot; gradientUnits=&quot;userSpaceOnUse&quot; xlink:type=&quot;simple&quot; xlink:actuate=&quot;onLoad&quot; xlink:show=&quot;other&quot; /&gt;&lt;linearGradient xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;#linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9&quot; id=&quot;linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9_1703690&quot; x1=&quot;0&quot; y1=&quot;100.0&quot; x2=&quot;0&quot; y2=&quot;206.0&quot; gradientUnits=&quot;userSpaceOnUse&quot; xlink:type=&quot;simple&quot; xlink:actuate=&quot;onLoad&quot; xlink:show=&quot;other&quot; /&gt;&lt;linearGradient xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;#linearGradientFF6666FF9696FFB6B6&quot; id=&quot;linearGradientFF6666FF9696FFB6B6_913862&quot; x1=&quot;0&quot; y1=&quot;200.0&quot; x2=&quot;0&quot; y2=&quot;235.0&quot; gradientUnits=&quot;userSpaceOnUse&quot; xlink:type=&quot;simple&quot; xlink:actuate=&quot;onLoad&quot; xlink:show=&quot;other&quot; /&gt;&lt;linearGradient xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;#linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9&quot; id=&quot;linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9_17278476&quot; x1=&quot;0&quot; y1=&quot;600.0&quot; x2=&quot;0&quot; y2=&quot;706.0&quot; gradientUnits=&quot;userSpaceOnUse&quot; xlink:type=&quot;simple&quot; xlink:actuate=&quot;onLoad&quot; xlink:show=&quot;other&quot; /&gt;&lt;linearGradient xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;#linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9&quot; id=&quot;linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9_12788779&quot; x1=&quot;0&quot; y1=&quot;107.0&quot; x2=&quot;0&quot; y2=&quot;213.0&quot; gradientUnits=&quot;userSpaceOnUse&quot; xlink:type=&quot;simple&quot; xlink:actuate=&quot;onLoad&quot; xlink:show=&quot;other&quot; /&gt;&lt;linearGradient xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;#linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9&quot; id=&quot;linearGradientF8FBFEEDF5FCDEEDFAD4E7F8E2E5E9_4403058&quot; x1=&quot;0&quot; y1=&quot;300.0&quot; x2=&quot;0&quot; y2=&quot;406.0&quot; gradientUnits=&quot;userSpaceOnUse&quot; xlink:type=&quot;simple&quot; xlink:actuate=&quot;onLoad&quot; xlink:show=&quot;other&quot; /&gt;&lt;/defs&gt;&lt;/svg&gt;</processDiagram>
+    <bpmnVersion>2</bpmnVersion>
+    <inheritFormSecurity>false</inheritFormSecurity>
+    <openInstances>0</openInstances>
+    <processStates/>
+    <favorito>false</favorito>
+    <mobileReady>true</mobileReady>
+    <rowId>0</rowId>
+  </ProcessDefinitionVersion>
+  <list>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <sequence>4</sequence>
+      </processStatePK>
+      <stateName>Solicitar contrato</stateName>
+      <stateDescription>Solicitar contrato</stateDescription>
+      <instruction>Solicitar a elaboração de um contrato</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;Compradores&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>true</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <subProcess>false</subProcess>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>110</positionX>
+      <positionY>122</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>10</bpmnType>
+      <counterSign>false</counterSign>
+      <digitalSignature>false</digitalSignature>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <sequence>10</sequence>
+      </processStatePK>
+      <stateName>Gerar documento</stateName>
+      <stateDescription>Gerar documento</stateDescription>
+      <instruction>Acesse o sistema Protheus e gere o documento fisíco</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;51&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <subProcess>false</subProcess>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>420</positionX>
+      <positionY>107</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId>Default</periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <counterSign>false</counterSign>
+      <digitalSignature>false</digitalSignature>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <signalId>0</signalId>
+      <executionType>0</executionType>
+      <deadlineFieldName></deadlineFieldName>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <sequence>18</sequence>
+      </processStatePK>
+      <stateName>Aguardar assinatura</stateName>
+      <stateDescription>Aguardar assinatura</stateDescription>
+      <instruction>Confirme se o contrato foi assinado por todas as partes. Em caso de recusa do fornecedor, o contrato gerado no Protheus será cancelado/excluído</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;10&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <subProcess>false</subProcess>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>880</positionX>
+      <positionY>110</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId>Default</periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <counterSign>false</counterSign>
+      <digitalSignature>false</digitalSignature>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <signalId>0</signalId>
+      <executionType>0</executionType>
+      <deadlineFieldName></deadlineFieldName>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <sequence>24</sequence>
+      </processStatePK>
+      <stateName>Assinado</stateName>
+      <stateDescription>Assinado</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <subProcess>false</subProcess>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1390</positionX>
+      <positionY>120</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>6</stateType>
+      <bpmnType>60</bpmnType>
+      <counterSign>false</counterSign>
+      <digitalSignature>false</digitalSignature>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <sequence>37</sequence>
+      </processStatePK>
+      <stateName>Assinado?</stateName>
+      <stateDescription>Assinado?</stateDescription>
+      <joint>false</joint>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <subProcess>false</subProcess>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>1080</positionX>
+      <positionY>90</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <digitalSignature>false</digitalSignature>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <sequence>51</sequence>
+      </processStatePK>
+      <stateName>Configurar tipo de contrato</stateName>
+      <stateDescription>Configurar tipo de contrato</stateDescription>
+      <instruction>Selecione o tipo de contrato ou tipo de aditivo para integrar ao Protheus e a partir dele gerar um modelo de documento fisico baseado em um template.</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;Compradores&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <subProcess>false</subProcess>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>230</positionX>
+      <positionY>107</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId>Default</periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <counterSign>false</counterSign>
+      <digitalSignature>false</digitalSignature>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <signalId>0</signalId>
+      <executionType>0</executionType>
+      <deadlineFieldName></deadlineFieldName>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <sequence>57</sequence>
+      </processStatePK>
+      <stateName>Anexar contrato</stateName>
+      <stateDescription>Anexar contrato</stateDescription>
+      <instruction>Avalie porque o sistema não localizou o contrato com o status de vigente</instruction>
+      <deadlineTime>300</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;10&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <subProcess>false</subProcess>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1210</positionX>
+      <positionY>100</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <counterSign>false</counterSign>
+      <digitalSignature>false</digitalSignature>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <signalId>0</signalId>
+      <executionType>0</executionType>
+      <deadlineFieldName></deadlineFieldName>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <sequence>64</sequence>
+      </processStatePK>
+      <stateName>Recusado</stateName>
+      <stateDescription>Recusado</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <subProcess>false</subProcess>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1160</positionX>
+      <positionY>200</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>6</stateType>
+      <bpmnType>60</bpmnType>
+      <counterSign>false</counterSign>
+      <digitalSignature>false</digitalSignature>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <sequence>66</sequence>
+      </processStatePK>
+      <stateName>Realizar parecer</stateName>
+      <stateDescription>Realizar parecer</stateDescription>
+      <instruction>Realizar parecer sobre o contrato físico que foi enviado na plataforma digital ou devolver para ajustes</instruction>
+      <deadlineTime>57600</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;assessoria_juridica&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <subProcess>false</subProcess>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>740</positionX>
+      <positionY>600</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId>Default</periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <counterSign>false</counterSign>
+      <digitalSignature>false</digitalSignature>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <signalId>0</signalId>
+      <executionType>0</executionType>
+      <deadlineFieldName></deadlineFieldName>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <sequence>73</sequence>
+      </processStatePK>
+      <stateName>Realizar upload do documento</stateName>
+      <stateDescription>Realizar upload do documento</stateDescription>
+      <instruction>Realize o upload do documento fisíco gerado no Protheus na plataforma de assinatura digital</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;51&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <subProcess>false</subProcess>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>600</positionX>
+      <positionY>107</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>81</bpmnType>
+      <counterSign>false</counterSign>
+      <digitalSignature>false</digitalSignature>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <signalId>0</signalId>
+      <executionType>0</executionType>
+      <deadlineFieldName></deadlineFieldName>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <sequence>79</sequence>
+      </processStatePK>
+      <stateName>Validar contrato</stateName>
+      <stateDescription>Validar contrato</stateDescription>
+      <instruction>Valide se os dados da solicitação estão de acordo com as informações do contrato físico ou devolva para ajustes</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Papel</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;ASSESSORIA_ADM&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <subProcess>false</subProcess>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>740</positionX>
+      <positionY>300</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <counterSign>false</counterSign>
+      <digitalSignature>false</digitalSignature>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <signalId>0</signalId>
+      <executionType>0</executionType>
+      <deadlineFieldName></deadlineFieldName>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+    </ProcessState>
+  </list>
+  <list>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <sequence>37</sequence>
+        <expressionOrder>1</expressionOrder>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;statusContrato&quot;) == &quot;assinado&quot;</condition>
+      <destinationSequenceId>57</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <sequence>37</sequence>
+        <expressionOrder>2</expressionOrder>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;statusContrato&quot;) != &quot;assinado&quot;</condition>
+      <destinationSequenceId>64</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+  </list>
+  <list>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>38</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>18</initialStateSequence>
+      <finalStateSequence>37</finalStateSequence>
+      <returnLabel></returnLabel>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+      <name></name>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>41</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>37</initialStateSequence>
+      <finalStateSequence>64</finalStateSequence>
+      <returnLabel></returnLabel>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+      <name></name>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>52</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>4</initialStateSequence>
+      <finalStateSequence>51</finalStateSequence>
+      <returnLabel></returnLabel>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+      <name></name>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>53</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>true</returnPermited>
+      <initialStateSequence>51</initialStateSequence>
+      <finalStateSequence>10</finalStateSequence>
+      <returnLabel></returnLabel>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+      <name></name>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>59</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>57</initialStateSequence>
+      <finalStateSequence>24</finalStateSequence>
+      <returnLabel></returnLabel>
+      <automaticLink>false</automaticLink>
+      <defaultLink>true</defaultLink>
+      <type>0</type>
+      <name></name>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>60</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>37</initialStateSequence>
+      <finalStateSequence>57</finalStateSequence>
+      <returnLabel></returnLabel>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+      <name></name>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>62</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>57</initialStateSequence>
+      <finalStateSequence>24</finalStateSequence>
+      <returnLabel></returnLabel>
+      <automaticLink>true</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+      <name></name>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>74</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>true</returnPermited>
+      <initialStateSequence>10</initialStateSequence>
+      <finalStateSequence>73</finalStateSequence>
+      <returnLabel></returnLabel>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+      <name></name>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>80</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>73</initialStateSequence>
+      <finalStateSequence>79</finalStateSequence>
+      <returnLabel></returnLabel>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+      <name></name>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>81</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>79</initialStateSequence>
+      <finalStateSequence>10</finalStateSequence>
+      <returnLabel></returnLabel>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+      <name></name>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>82</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>79</initialStateSequence>
+      <finalStateSequence>66</finalStateSequence>
+      <returnLabel></returnLabel>
+      <automaticLink>false</automaticLink>
+      <defaultLink>true</defaultLink>
+      <type>0</type>
+      <name></name>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>83</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>66</initialStateSequence>
+      <finalStateSequence>10</finalStateSequence>
+      <returnLabel></returnLabel>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+      <name></name>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>84</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>66</initialStateSequence>
+      <finalStateSequence>18</finalStateSequence>
+      <returnLabel></returnLabel>
+      <automaticLink>false</automaticLink>
+      <defaultLink>true</defaultLink>
+      <type>0</type>
+      <name></name>
+    </ProcessLink>
+  </list>
+  <list/>
+  <list>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <eventId>beforeCancelProcess</eventId>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeCancelProcess(colleagueId,processId){&#x0D;
+	var ABERTURA = 0;&#x0D;
+	var SOLICITAR = 4;&#x0D;
+	var ELABORAR = 10&#x0D;
+	var ASSINAR = 18;&#x0D;
+	var ANEXAR = 57;&#x0D;
+	&#x0D;
+	var ativAtual  = getValue(&quot;WKNumState&quot;);	&#x0D;
+	var idDocumento = getValue(&quot;WKCardId&quot;);&#x0D;
+	&#x0D;
+	if (ativAtual == ASSINAR ){&#x0D;
+		 throw &quot;Você não pode cancelar a solicitação desse contrato pois ela já está em fase de assinatura. &quot; +&#x0D;
+		 		&quot;Procure o setor juridico para abordar o processo de assinatura digital.&quot; +&#x0D;
+		 		&quot;Caso o contrato já esteja assinado, será necessário realizar o distrato e &quot; +&#x0D;
+		 		&quot;voltar para fase de cotação da contratação do serviço.&quot;;&#x0D;
+			&#x0D;
+	}&#x0D;
+	&#x0D;
+}&#x0D;
+&#x0D;
+function setContrato(id,opcao){&#x0D;
+	 var constraints = new Array();                                 &#x0D;
+	 constraints.push(DatasetFactory.createConstraint(&quot;documentid&quot;, id, id, ConstraintType.MUST));&#x0D;
+	 constraints.push(DatasetFactory.createConstraint(&quot;acao&quot;, opcao, opcao, ConstraintType.MUST));&#x0D;
+    var resultDataset = DatasetFactory.getDataset(&quot;VM_CNTA300_SOLICITACAO_CONTRATO&quot;, null, constraints, null);                                                                    &#x0D;
+   		     &#x0D;
+        if (resultDataset.getValue(0,&quot;RETORNO&quot;) != &quot;SUCESSO&quot;){&#x0D;
+            throw resultDataset.getValue(0,&quot;RETORNO&quot;);&#x0D;
+        }&#x0D;
+        else {&#x0D;
+       	 	hAPI.setTaskComments(usuario, codSolicitacao, 0, &quot;Contrato registrado automaticamente. Filial+Número+Revisão: &quot; + filial+&apos;-&apos;+resultDataset.getValue(0,&quot;NUMERO&quot;)+&apos;-&apos;+resultDataset.getValue(0,&quot;REVISAO&quot;));		        	 	&#x0D;
+       	 	//GRAVA NUMERO DO CONTRATO NO FORMULARIO&#x0D;
+				hAPI.setCardValue(&quot;Numerocontrato&quot;,resultDataset.getValue(0,&quot;NUMERO&quot;));&#x0D;
+				hAPI.setCardValue(&quot;filial&quot;,filial);&#x0D;
+				hAPI.setCardValue(&quot;revisao&quot;,resultDataset.getValue(0,&quot;REVISAO&quot;));&#x0D;
+				&#x0D;
+        }&#x0D;
+&#x0D;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <eventId>beforeStateEntry</eventId>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeStateEntry(sequenceId){&#x0D;
+	var CONFIGURAR = 51;&#x0D;
+	var ELABORAR = 10; &#x0D;
+	var ASSINAR = 18;&#x0D;
+	var ANEXAR = 57;&#x0D;
+	&#x0D;
+	&#x0D;
+	var ativAtual 		 = getValue(&quot;WKNumState&quot;);		&#x0D;
+	var codSolicitacao 	 = getValue(&quot;WKNumProces&quot;);&#x0D;
+	var nextAtv  		 = getValue(&quot;WKNextState&quot;);&#x0D;
+	var idDocumento = getValue(&quot;WKCardId&quot;);&#x0D;
+	var idFormulario = getValue(&quot;WKFormId&quot;)&#x0D;
+	var empresa = getValue(&quot;WKCompany&quot;);&#x0D;
+    var usuario = getValue(&apos;WKUser&apos;);&#x0D;
+    &#x0D;
+	var definicaoValor = hAPI.getCardValue(&quot;definicaoValor&quot;);	&#x0D;
+	var contrato = hAPI.getCardValue(&quot;Numerocontrato&quot;);&#x0D;
+	var revisao = hAPI.getCardValue(&quot;revisao&quot;);&#x0D;
+	var statusContrato = hAPI.getCardValue(&quot;statusContrato&quot;);&#x0D;
+	var tipoContrato = hAPI.getCardValue(&quot;tipoContrato&quot;);	   &#x0D;
+	var tipoRevisao = hAPI.getCardValue(&quot;tipoRevisao&quot;);&#x0D;
+	var filial = hAPI.getCardValue(&quot;filial&quot;);&#x0D;
+	var cgc = hAPI.getCardValue(&quot;cnpjcpf&quot;);&#x0D;
+	&#x0D;
+&#x0D;
+		&#x0D;
+	&#x0D;
+	if (ativAtual == CONFIGURAR &amp;&amp; nextAtv == ELABORAR){&#x0D;
+		if ((tipoContrato == &quot;&quot; &amp;&amp; tipoRevisao == &quot;&quot; ) || (tipoContrato == null &amp;&amp; tipoRevisao == null ) ){&#x0D;
+			throw &quot;Tipo de contrato ou revisão não informado.&quot;;&#x0D;
+		}&#x0D;
+		else {&#x0D;
+			setContrato(idDocumento,3); &#x0D;
+		}&#x0D;
+		&#x0D;
+	}&#x0D;
+	else if (ativAtual == ELABORAR &amp;&amp; nextAtv == CONFIGURAR){&#x0D;
+			setContrato(idDocumento,5); &#x0D;
+			hAPI.setCardValue(&quot;Numerocontrato&quot;,&quot;&quot;);&#x0D;
+			hAPI.setCardValue(&quot;filial&quot;,&quot;&quot;);&#x0D;
+			hAPI.setCardValue(&quot;revisao&quot;,&quot;&quot;);&#x0D;
+			&#x0D;
+	}&#x0D;
+	else if (ativAtual == ASSINAR){&#x0D;
+	    	if (nextAtv == 37){&#x0D;
+	    		//recusado pelo fornecedor - exclui o contrato no protheus&#x0D;
+				if (statusContrato !=&quot;assinado&quot;){				&#x0D;
+					setContrato(idDocumento,5); 	&#x0D;
+					hAPI.setCardValue(&quot;Numerocontrato&quot;,&quot;&quot;);&#x0D;
+					hAPI.setCardValue(&quot;filial&quot;,&quot;&quot;);&#x0D;
+					hAPI.setCardValue(&quot;revisao&quot;,&quot;&quot;);&#x0D;
+					&#x0D;
+				}&#x0D;
+				//contrato assinado&#x0D;
+				else {&#x0D;
+					//chamar webservice que sincroniza contratos&#x0D;
+					&#x0D;
+				}&#x0D;
+	    	}&#x0D;
+    }&#x0D;
+	else if (ativAtual ==  ANEXAR){&#x0D;
+			if (nextAtv == CONFIGURAR){&#x0D;
+				setContrato(idDocumento,5); 	&#x0D;
+				hAPI.setCardValue(&quot;Numerocontrato&quot;,&quot;&quot;);&#x0D;
+				hAPI.setCardValue(&quot;filial&quot;,&quot;&quot;);&#x0D;
+				hAPI.setCardValue(&quot;revisao&quot;,&quot;&quot;);&#x0D;
+			}&#x0D;
+			else {&#x0D;
+				//VERIFICA SE EXISTE ANEXO NO CONTRATO&#x0D;
+				var lAnexo = getContratoAtivo(cgc,contrato);&#x0D;
+				&#x0D;
+				if (lAnexo == false){&#x0D;
+					throw &quot;É necessário que o contrato esteja vigente. Aguarde 30 minutos e tente novamente mais tarde.&quot;;&#x0D;
+				}&#x0D;
+			}&#x0D;
+	&#x0D;
+	&#x0D;
+	&#x0D;
+	}&#x0D;
+    &#x0D;
+    function setContrato(id,opcao){&#x0D;
+			 var constraints = new Array();                                 &#x0D;
+			 constraints.push(DatasetFactory.createConstraint(&quot;documentid&quot;, id, id, ConstraintType.MUST));&#x0D;
+			 constraints.push(DatasetFactory.createConstraint(&quot;acao&quot;, opcao, opcao, ConstraintType.MUST));&#x0D;
+		&#x0D;
+			 constraints.push(DatasetFactory.createConstraint(&quot;contrato&quot;, contrato, contrato, ConstraintType.MUST));&#x0D;
+			 constraints.push(DatasetFactory.createConstraint(&quot;tipo&quot;, tipoContrato, tipoContrato, ConstraintType.MUST));&#x0D;
+			 constraints.push(DatasetFactory.createConstraint(&quot;revisao&quot;, revisao, revisao, ConstraintType.MUST));&#x0D;
+			 constraints.push(DatasetFactory.createConstraint(&quot;tipoRevisao&quot;, tipoRevisao, tipoRevisao, ConstraintType.MUST));&#x0D;
+			 //constraints.push(DatasetFactory.createConstraint(&quot;filial&quot;, filial, filial, ConstraintType.MUST));&#x0D;
+			 &#x0D;
+		     var resultDataset = DatasetFactory.getDataset(&quot;VM_CNTA300_SOLICITACAO_CONTRATO&quot;, null, constraints, null);                                                                    &#x0D;
+		    		     &#x0D;
+		         if (resultDataset.getValue(0,&quot;RETORNO&quot;) != &quot;SUCESSO&quot;){&#x0D;
+		             throw resultDataset.getValue(0,&quot;RETORNO&quot;);&#x0D;
+		         }&#x0D;
+		         else {&#x0D;
+		        	 &#x0D;
+		        	 if (opcao != 5){&#x0D;
+		        		//hAPI.setTaskComments(usuario, codSolicitacao, 0, &quot;Contrato registrado automaticamente. Filial+Número+Revisão: &quot; + filial+&apos;-&apos;+resultDataset.getValue(0,&quot;NUMERO&quot;)+&apos;-&apos;+resultDataset.getValue(0,&quot;REVISAO&quot;));		        	 	&#x0D;
+			        	 	//GRAVA NUMERO DO CONTRATO NO FORMULARIO&#x0D;
+							hAPI.setCardValue(&quot;Numerocontrato&quot;,resultDataset.getValue(0,&quot;NUMERO&quot;));&#x0D;
+							hAPI.setCardValue(&quot;filial&quot;,filial);&#x0D;
+							hAPI.setCardValue(&quot;revisao&quot;,resultDataset.getValue(0,&quot;REVISAO&quot;));&#x0D;
+		        	 }&#x0D;
+		        	 	&#x0D;
+						&#x0D;
+		         }&#x0D;
+    &#x0D;
+    }&#x0D;
+    //https://tdn.totvs.com/display/public/fluig/Guia+de+propriedades+dos+objetos#GuiadePropriedadesdosObjetos-DocumentDto&#x0D;
+    //https://tdn.totvs.com/display/public/fluig/hAPI&#x0D;
+    //https://tdn.totvs.com/display/public/fluig/Desenvolvimento+de+Eventos#DesenvolvimentodeEventos-DocumentDto&#x0D;
+    //https://tdn.totvs.com/display/public/fluig/docAPI&#x0D;
+    &#x0D;
+    &#x0D;
+    &#x0D;
+    function getContratoAtivo(cgc,contrato){&#x0D;
+    	var constraints = new Array();                                 &#x0D;
+		constraints.push(DatasetFactory.createConstraint(&quot;CGC&quot;, cgc, cgc, ConstraintType.MUST)); &#x0D;
+    	var listaContratos = DatasetFactory.getDataset(&quot;ds_get_Contratos&quot;, null, constraints, null);                                                                    &#x0D;
+	    		&#x0D;
+	     for (var i =0; i &lt; listaContratos.rowsCount ; i++  ){	    &#x0D;
+	    	 if (listaContratos.getValue(i,&quot;CONTRATO&quot;) == contrato){&#x0D;
+	    		 return true;&#x0D;
+	    	 }&#x0D;
+	    	 &#x0D;
+	     }&#x0D;
+	  return false;&#x0D;
+    }&#x0D;
+    &#x0D;
+    &#x0D;
+	function convertDataToString(dataToString) {&#x0D;
+	    var dia;&#x0D;
+&#x0D;
+	    //MES INICIA DO ZERO POR ISSO SOMA 1 PARA ACHAR O MES CORRETO&#x0D;
+	    var mes = dataToString.getMonth() + 1;&#x0D;
+	    if (dataToString.getDate().toString().length == 1) {&#x0D;
+	        dia = dataToString.getDate();&#x0D;
+	        dia = &quot;0&quot; + dia.toString();&#x0D;
+&#x0D;
+	    } else {&#x0D;
+	        dia = dataToString.getDate();&#x0D;
+&#x0D;
+	    }&#x0D;
+&#x0D;
+	 &#x0D;
+	    //converte mes&#x0D;
+	    if (mes.toString().length == 1) {&#x0D;
+	        mes = &quot;0&quot; + mes.toString();&#x0D;
+&#x0D;
+	    }&#x0D;
+&#x0D;
+	    //novo formato de data: para salvar em campos data do Fluig&#x0D;
+	    return dia + &quot;/&quot; + mes + &quot;/&quot; + dataToString.getFullYear();&#x0D;
+&#x0D;
+&#x0D;
+	}&#x0D;
+    &#x0D;
+    &#x0D;
+	&#x0D;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <eventId>beforeTaskSave</eventId>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeTaskSave(colleagueId,nextSequenceId,userList){&#x0D;
+	var ABERTURA = 0;&#x0D;
+	var SOLICITAR = 4;&#x0D;
+	var ELABORAR = 10&#x0D;
+	var ASSINAR = 18;&#x0D;
+	var ANEXAR = 57;&#x0D;
+	&#x0D;
+	//RECUPERA NUMERO DA ATIVIDADE&#x0D;
+	var ativAtual  = getValue(&quot;WKNumState&quot;);	&#x0D;
+	var solicitacaoPai;&#x0D;
+	&#x0D;
+	if (ativAtual == ABERTURA || ativAtual == SOLICITAR){&#x0D;
+		var dataAtual = new Date();         &#x0D;
+	    var dataSolicitacao = convertDataToString(dataAtual);&#x0D;
+	         &#x0D;
+		hAPI.setCardValue(&quot;dataSolicitacao&quot;, dataSolicitacao);&#x0D;
+	&#x0D;
+		//Recupera o numero da solicitação&#x0D;
+	    var numProcess = getValue(&quot;WKNumProces&quot;);	    &#x0D;
+		&#x0D;
+		// Busca o número da solicitação pai&#x0D;
+		var retornaProcessoSolicitacao = hAPI.getParentInstance(numProcess);&#x0D;
+        &#x0D;
+		if (retornaProcessoSolicitacao != 0 ){				&#x0D;
+			// Busca os dados do formulário da solicitação pai&#x0D;
+	        var parentCardData = hAPI.getCardData(retornaProcessoSolicitacao);&#x0D;
+	        &#x0D;
+	        // Replica um dado do formulário da solicitação pai para o formulário da solicitação filha&#x0D;
+	        var solicitante = parentCardData.get(&quot;solicitante&quot;);&#x0D;
+	        hAPI.setCardValue(&quot;responsavel&quot;, solicitante);	&#x0D;
+	        &#x0D;
+	 	        &#x0D;
+	        &#x0D;
+	        &#x0D;
+	        &#x0D;
+		}&#x0D;
+		&#x0D;
+	}&#x0D;
+&#x0D;
+	function convertDataToString(dataToString) {&#x0D;
+	    var dia;&#x0D;
+&#x0D;
+	    //MES INICIA DO ZERO POR ISSO SOMA 1 PARA ACHAR O MES CORRETO&#x0D;
+	    var mes = dataToString.getMonth() + 1;&#x0D;
+	    if (dataToString.getDate().toString().length == 1) {&#x0D;
+	        dia = dataToString.getDate();&#x0D;
+	        dia = &quot;0&quot; + dia.toString();&#x0D;
+&#x0D;
+	    } else {&#x0D;
+	        dia = dataToString.getDate();&#x0D;
+&#x0D;
+	    }&#x0D;
+&#x0D;
+	    //converte mes&#x0D;
+	    if (mes.toString().length == 1) {&#x0D;
+	        mes = &quot;0&quot; + mes.toString();&#x0D;
+&#x0D;
+	    }&#x0D;
+&#x0D;
+	    //novo formato de data: para salvar em campos data do Fluig&#x0D;
+	    return dia + &quot;/&quot; + mes + &quot;/&quot; + dataToString.getFullYear();&#x0D;
+&#x0D;
+&#x0D;
+	}&#x0D;
+	&#x0D;
+}</eventDescription>
+    </WorkflowProcessEvent>
+  </list>
+  <list/>
+  <list>
+    <SwimLane>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <sequence>1</sequence>
+      </swimLanePK>
+      <stateName>Solicitação de Contrato</stateName>
+      <positionX>10</positionX>
+      <positionY>10</positionY>
+      <color>FFFFFF</color>
+      <height>751</height>
+      <width>1431</width>
+      <type>1</type>
+      <parentSequence>0</parentSequence>
+    </SwimLane>
+    <SwimLane>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <sequence>2</sequence>
+      </swimLanePK>
+      <stateName>Comprador</stateName>
+      <positionX>40</positionX>
+      <positionY>10</positionY>
+      <color>9F9F9F</color>
+      <height>250</height>
+      <width>1401</width>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+    </SwimLane>
+    <SwimLane>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <sequence>3</sequence>
+      </swimLanePK>
+      <stateName>Jurídico</stateName>
+      <positionX>40</positionX>
+      <positionY>510</positionY>
+      <color>82b0b7</color>
+      <height>251</height>
+      <width>1401</width>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+    </SwimLane>
+    <SwimLane>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <sequence>4</sequence>
+      </swimLanePK>
+      <stateName>Assessora de Administração</stateName>
+      <positionX>40</positionX>
+      <positionY>260</positionY>
+      <color>adc9ac</color>
+      <height>250</height>
+      <width>1401</width>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+    </SwimLane>
+  </list>
+  <list/>
+  <list/>
+  <list>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>62</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>1352</positionX>
+      <positionY>83</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>80</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>792</positionX>
+      <positionY>140</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>81</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>472</positionX>
+      <positionY>334</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>83</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>472</positionX>
+      <positionY>636</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>SolicitacaoContrato</processId>
+        <version>29</version>
+        <linkSequence>84</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>932</positionX>
+      <positionY>633</positionY>
+    </ProcessLinkBend>
+  </list>
+  <list/>
+  <list/>
+  <list/>
+  <list/>
+  <list/>
+  <list/>
+  <list/>
+  <list/>
+</list>

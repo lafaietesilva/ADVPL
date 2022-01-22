@@ -1,0 +1,29 @@
+{
+    "cnpj" : "",
+    "empresa" : "99",
+    "filial" : "01",
+    "solicitacao" : "1",
+    "solicitante" : "jorge",
+    "dtsolicitacao" : "20/01/2022",
+    "itens" : [ {
+      "produto" : "000001",
+      "quantidade" : "1",
+      "unidade" : "UN",
+      "preco" : "0",
+      "dtnecessidade" : "20/01/2022",
+      "centrocusto" : "000000100",
+      "valor" : "0",
+      "id" : "1"
+    } ,
+{
+      "produto" : "000002",
+      "quantidade" : "1",
+      "unidade" : "UN",
+      "preco" : "0",
+      "dtnecessidade" : "20/01/2022",
+      "centrocusto" : "000000100",
+      "valor" : "0",
+      "id" : "2"
+    }
+]
+  }

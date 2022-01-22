@@ -1,0 +1,373 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+        <script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+        <script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+        <script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+        <script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+        <link type="text/css" rel="stylesheet" href="SolicitacaoContrato.css" />
+    </head>
+    <body>
+        <div class="fluig-style-guide">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-xs-6 col-md-3">
+                        <img src="https://visaomundial.org/images/logo_VMB.svg" />
+                    </div>
+                </div>
+            </div>
+            <form name="form" role="form">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="container text-center">
+                            <h4>Solicitação de contrato</h4>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                    <div class="row">
+                                                                        <div class="form-group col-md-2">
+                                                                            <label for="id" class="required">Cód. solicitação </label>
+                                                                            <input type="text" class="form-control" id="solicitacao" name="solicitacao" readonly />
+                                                                        </div>
+                                                                    </div>
+                        <div class="row">
+                            <div class="form-group col-md-5">
+                                <label for="solicitante" class="required">Solicitante</label>
+                                <input type="text" class="form-control" id="solicitante" name="solicitante" readonly />
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input type="email" class="form-control" id="emailSolicitante" name="emailSolicitante" readonly />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="dataSolicitacao">Data da solicitação</label>
+                                <div class="input-group date">
+                                    <input type="text" class="form-control" id="dataSolicitacao" name="dataSolicitacao" readonly />
+                                    <span class="input-group-addon"> <span class="fluigicon fluigicon-calendar"></span> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <label>Categoria do contrato</label><br />
+                                <label for="servico">Serviço</label>
+                                <input type="radio" id="servico" name="tipoAprovacao" value="servico" />
+                                <label for="produto">Mercadoria</label>
+                                <input type="radio" id="produto" name="tipoAprovacao" value="produto" />
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>Origem do contrato</label><br />
+                                <label for="OrigemVM">Visão Mundial</label>
+                                <input type="radio" id="OrigemVM" name="origem" value="visaomundial" />
+                                <label for="Origemf">Fornecedor</label>
+                                <input type="radio" id="Origemf" name="origem" value="fornecedor" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label>Objeto</label>
+                                <textarea class="form-control" id="finalidade" name="finalidade"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label>Negociação</label>
+                                <textarea class="form-control" id="negociacao" name="negociacao"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h5 class="panel-title">
+                                    <b>Informações do fornecedor e da negociação</b>
+                                </h5>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="form-group col-md-5">
+                                        <label for="cgcFornecedor">CPF/CNPJ Fornecedor</label>
+                                        <input
+                                            name="cnpjcpf"
+                                            class="form-control"
+                                            type="zoom"
+                                            id="cnpjcpf"
+                                            data-zoom="{'displayKey':'CNPJ',
+                                 'datasetId':'ds_get_Fornecedor',
+                                 'maximumSelectionLength':'1',
+                                 'placeholder':'Selecione o fornecedor',
+                                 'fields':[
+                                 {'field':'RAZAO_SOCIAL','label':'RAZAO_SOCIAL'},
+                                 {'field':'CNPJ','label':'CNPJ','standard':'true'},
+                                 {'field':'CODIGO','label':'CODIGO'},
+                                 {'field':'TIPO','label':'TIPO', 'visible' : 'false'},
+                                 {'field':'FANTASIA','label':'FANTASIA', 'visible' : 'false'},
+                                 {'field':'FORM_PGTO','label':'FORM_PGTO', 'visible' : 'false'},
+                                 {'field':'BANCO','label':'BANCO', 'visible' : 'false'},
+                                 {'field':'AGENCIA','label':'AGENCIA', 'visible' : 'false'},
+                                 {'field':'CONTA_F','label':'CONTA_F', 'visible' : 'false'},
+                                 {'field':'TIPO_CONTA','label':'TIPO_CONTA', 'visible' : 'false'}																				  					
+                                 ]
+                                 }"
+                                        />
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>Razão Social</label>
+                                        <input class="form-control" type="text" id="razaosocial" name="razaosocial" readonly />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-5">
+                                        <label>Nome Fantásia</label>
+                                        <input class="form-control" type="text" id="nomefantasia" name="nomefantasia" readonly />
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label>Codigo Fornecedor</label>
+                                        <input type="text" id="codigoFornecedor" class="form-control" name="codigoFornecedor" readonly />
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label>Tipo de Pessoa</label>
+                                        <br />
+                                        <label for="fisica">Fisica</label>
+                                        <input type="radio" id="fisica" name="tipoPessoa" value="FISICA" readonly />
+                                        <label for="juridica">Juridica</label>
+                                        <input type="radio" id="juridica" name="tipoPessoa" value="JURIDICA" readonly />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label>Meio de pagamento</label>
+                                        <input type="text" id="meioPagamento" name="meioPagamento" class="form-control" readonly />
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label>Condição de pagamento</label>
+                                        <input
+                                            type="zoom"
+                                            name="condicaoPgto"
+                                            id="condicaoPgto"
+                                            data-zoom="{
+                                 'displayKey':'DESCRICAO',
+                                 'datasetId':'VM_CondicaoPagamento',
+                                 'maximumSelectionLength':'1',
+                                 'placeholder':'Selecione a condição de pagamento',
+                                 'fields':[
+                                 {'field':'CODIGO', 'label':'CODIGO'},
+                                 {'field':'DESCRICAO', 'label':'DESCRICAO', 'standard':'true' }
+                                 ]
+                                 }"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-2">
+                                        <label>Banco</label>
+                                        <input type="text" id="banco" name="banco" class="form-control" readonly />
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label>Agência</label>
+                                        <input type="text" id="agencia" name="agencia" class="form-control" readonly />
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label>Conta</label>
+                                        <input type="text" id="contaFornecedor" name="contaFornecedor" class="form-control" readonly />
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label>Tipo de Conta</label>
+                                        <input type="text" id="tipoConta" name="tipoConta" class="form-control" readonly />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-10">
+                                        <label>Emails e nome do responsável pela assinatura</label>
+                                        <textarea rows="3" class="form-control" name="contato" id="contato"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-5">
+                                        <label for="responsavel">Responsável</label>
+                                        <input type="text" class="form-control" id="responsavel" name="responsavel" readonly />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h5 class="panel-title">
+                                    <b>Informações sobre valores e período de pagamento</b>
+                                </h5>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="form-group col-md-3">
+                                        <label>Período de pagamento</label>
+                                        <br />
+                                        <label for="mensal">Mensal</label>
+                                        <input type="radio" id="mensal" name="formapgto" value="mensal" />
+                                        <label for="unico">Pagamento único</label>
+                                        <input type="radio" id="unico" name="formapgto" value="unico" />
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label>Definição do valor</label><br />
+                                        <label for="fixo">Valor fixo</label>
+                                        <input type="radio" id="fixo" name="definicaoValor" value="fixo" />
+                                        <label for="demanda">Valor variado</label>
+                                        <input type="radio" id="demanda" name="definicaoValor" value="demanda" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-3">
+                                        <label>Valor adiantado</label>
+                                        <input type="number" id="valor" name="valor" class="form-control" />
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label>Valor mensal ou limite mensal</label>
+                                        <input type="number" id="CotacaovalorMensal" name="CotacaovalorMensal" class="form-control" />
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label>Valor anual ou limite anual </label>
+                                        <input type="number" id="CotacaovalorAnual" name="CotacaovalorAnual" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h5 class="panel-title">
+                                    <b>Período de vigência</b>
+                                </h5>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="form-group col-md-3">
+                                        <label for="dtInicio">Data de Início</label>
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control" id="dtInicio" name="dtInicio" />
+                                            <span class="input-group-addon"> <span class="fluigicon fluigicon-calendar"></span> </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="dtFim">Data de Encerramento</label>
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control" id="dtFim" name="dtFim" />
+                                            <span class="input-group-addon"> <span class="fluigicon fluigicon-calendar"></span> </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h5 class="panel-title">
+                                    <b>Dados para cadastro de contrato ou aditivo de contrato</b>
+                                </h5>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label>Tipo de Contrato</label>
+                                        <input
+                                            type="zoom"
+                                            name="tipoContrato"
+                                            id="tipoContrato"
+                                            data-zoom="{
+	                                 'displayKey':'DESCRICAO',
+	                                 'datasetId':'VM_TipoContrato',
+	                                 'maximumSelectionLength':'1',
+	                                 'placeholder':'Selecione o tipo de contrato',
+	                                 'fields':[
+	                                 {'field':'CODIGO', 'label':'CODIGO'},
+	                                 {'field':'DESCRICAO', 'label':'DESCRICAO', 'standard':'true' }
+	                                 ]
+	                                 }"
+                                        />
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label>Tipo de revisão</label>
+                                        <input
+                                            type="zoom"
+                                            name="tipoRevisao"
+                                            id="tipoRevisao"
+                                            data-zoom="{
+	                                 'displayKey':'DESCRICAO',
+	                                 'filterValues':'IDENTIFICADOR,TIPO_REVISAO',
+	                                 'datasetId':'VM_Generico',
+	                                 'maximumSelectionLength':'1',
+	                                 'placeholder':'Selecione o tipo de revisão',
+	                                 'fields':[
+                                     {'field':'DESCRICAO','label':'DESCRICAO','standard':'true'},
+                                     {'field':'IDENTIFICADOR','label':'IDENTIFICADOR','visible' : 'false'}                                                                                                                                                                                           				  					
+                                     ]
+	                                 }"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-4" id="div_contrato">
+                                        <label>Número do Contrato</label><br />
+                                        <input
+                                            type="zoom"
+                                            name="Numerocontrato"
+                                            id="Numerocontrato"
+                                            data-zoom="{
+																			'displayKey':'CONTRATO',
+																			'datasetId':'ds_get_Contratos',
+																			'maximumSelectionLength':'1',
+																			'placeholder':'Selecione o contrato',
+																			'fields':[
+																			{'field':'CONTRATO', 'label':'CONTRATO', 'standard':'true'},
+																			{'field':'REVISAO', 'label':'REVISAO', 'visible' : 'false'},
+																			{'field':'VALOR_TOTAL', 'label':'VALOR_TOTAL', 'visible' : 'false'},
+																			{'field':'SALDO', 'label':'SALDO', 'visible' : 'false'},
+																			{'field':'DT_INICIO', 'label':'DT_INICIO', 'visible' : 'false'},
+																			{'field':'DT_FIM', 'label':'DT_FIM', 'visible' : 'false'},
+																			{'field':'CODIGO_FORNECE', 'label':'CODIGO_FORNECE', 'visible' : 'false'},
+																			{'field':'CGC', 'label':'CGC' , 'visible' : 'false'},
+																			{'field':'FILIAL', 'label':'FILIAL'},
+																			{'field':'FORNECEDOR', 'label':'FORNECEDOR'}
+																			]}"
+                                        />
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label>Revisão</label>
+                                        <input type="text" name="revisao" id="revisao" class="form-control" readonly />
+                                    </div>
+                                    <div class="form-group col-md-1">
+                                        <label>Filial</label>
+                                        <input type="text" name="filial" id="filial" class="form-control" readonly />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body" id="div_status">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h5 class="panel-title">
+                                    <b>Status do Contrato</b>
+                                </h5>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label for="statusA">Assinado</label>
+                                        <input type="radio" id="statusA" name="statusContrato" value="assinado" />
+                                        <label for="statusR">Recusado</label>
+                                        <input type="radio" id="statusR" name="statusContrato" value="recusado" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script src="SolicitacaoContrato.js"></script>
+    </body>
+</html>

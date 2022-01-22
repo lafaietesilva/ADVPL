@@ -1,0 +1,239 @@
+<html>
+<head>
+<link type="text/css" rel="stylesheet"
+	href="/style-guide/css/fluig-style-guide.min.css" />
+<script type="text/javascript"
+	src="/portal/resources/js/jquery/jquery.js"></script>
+<script type="text/javascript"
+	src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript"
+	src="/portal/resources/js/mustache/mustache-min.js"></script>
+<script type="text/javascript"
+	src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+</head>
+<body>
+	<div class="fluig-style-guide">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="row">
+					<img
+						src="https://proxxima.net/storage/app/uploads/public/5ea/1f7/af7/5ea1f7af72b2c773156463.svg"
+						border="0" style="width: 500px; height: 70px;">
+				</div>
+			</div>
+		</div>
+
+		<form name="form" role="form">
+			<input type="hidden" id="emailsolicitante" name="emailsolicitante">
+			<input type="hidden" id="codfilial" name="codfilial"> <input
+				type="hidden" id="cnpj" name="cnpj"> <input type="hidden"
+				id="codempresa" name="codempresa"> <input type="hidden"
+				id="solicitacao" name="solicitacao">
+			<div class="panel panel-primary">
+				<div class="panel-heading" style="background-color: #CD2784;">
+					<div class="container text-center">
+						<h4>Solicitação de Compras</h4>
+					</div>
+				</div>
+				<div class="panel-body">
+
+					<div class="row">
+						<div class="form-group col-md-2">
+							<label>Solicitação Protheus</label> <input type="text"
+								id="numscprotheus" name="numscprotheus" class="form-control"
+								readonly>
+						</div>
+						<div class="form-group col-md-5">
+							<label>Solicitante</label> <input type="text" id="solicitante"
+								name="solicitante" class="form-control" readonly>
+						</div>
+						<div class="form-group col-md-2">
+							<label>Data da solicitação</label> <input type="text"
+								id="dtsolicitacao" name="dtsolicitacao" class="form-control"
+								readonly>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label>Empresa</label> 
+							<input type="zoom" name="empresa"
+								id="empresa"
+								data-zoom="{
+                                 'displayKey':'CorporateName',
+                                 'datasetId':'ds_empresa',
+                                 'maximumSelectionLength':'1',
+                                 'placeholder':'Selecione a empresa',
+                                 'fields':[
+                                 {'field':'Code', 'label':'CODIGO', 'standard':'true'},
+                                 {'field':'CorporateName', 'label':'DESCRICAO'}
+                                 ]}" />
+							
+						</div>
+						<div class="form-group col-md-7">
+							<label>Filial</label> <input type="zoom" name="filial"
+								id="filial"
+								data-zoom="{
+                                 'displayKey':'Description',
+                                 'datasetId':'ds_filial',
+                                 'maximumSelectionLength':'1',
+                                 'placeholder':'Selecione a filial',
+                                 'fields':[
+                                 {'field':'Code', 'label':'CODIGO', 'standard':'true'},
+                                 {'field':'Description', 'label':'DESCRICAO'},
+                                 {'field':'Cgc', 'label':'CNPJ'}
+                                 ]}" />
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<b>Lista de produtos</b>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-2">
+							<label for="totalitens">Qtde de itens</label> <input
+								type="number" class="form-control" name="totalitens"
+								id="totalitens" readonly />
+						</div>
+						<div class="form-group col-md-2">
+							<label for="vltotal">Valor total</label> <input type="number"
+								class="form-control" name="vltotal" id="vltotal" readonly />
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-md-12">
+							<div class="form-field table-responsive">
+								<table tablename="tbprodutos" id="tbprodutos" border="0"
+									class="table table-striped table-bordered" noaddbutton="true"
+									customFnDelete="fnCustomDeleteProduto(this)"
+									>
+									
+									<thead>
+										<tr class="tableHeadRow">
+											<th class="tableColumn" >Produto cadastrado?</th>
+											<th class="tableColumn" style="width: 400px;">Produto não cadastrado</th>
+											<th class="tableColumn" style="width: 100px;">Produto cadastrado</th>
+											<th class="tableColumn" style="width: 100px;">Código do Produto</th>
+											<th class="tableColumn">Qtd</th>
+											<th class="tableColumn">Unid. Medida</th>
+											<th class="tableColumn">Preço unit.</th>
+											<th class="tableColumn">Valor total</th>
+											<th class="tableColumn">Dt Necessidade</th>
+											<th class="tableColumn">Centro de custo</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<select id="produtocadastrado" name="produtocadastrado" class="form-control" onchange="produtoCadastrado(this)" >
+														<option value="sim">Sim</option>
+														<option value="nao">Não</option>
+													</select>
+											</td>
+											<td>
+												<div class="form-group" style="width: 400px;">
+													<input type="text" id="novoproduto" name="novoproduto" class="form-control" >
+												</div>
+											</td>
+											<td>
+												<div class="form-group" style="width: 500px;">
+													<input type="zoom" id="produto" name="produto"
+														data-zoom="{
+					                                                                                    'displayKey':'Description',
+					                                                                                    'datasetId':'ds_produtos',
+					                                                                                    'maximumSelectionLength':'1',
+					                                                                                    'placeholder':'Selecione um produto',
+					                                                                                    'fields':[
+					                                                                                    {'field':'Code', 'label':'CODIGO'},
+					                                                                                    {'field':'Description', 'label':'DESCRICAO', 'standard':'true' },                                                                                    
+					                                                                                    {'field':'UnitOfMeasureCode', 'label':'UNIDADE_MEDIDA'},     
+																										{'field':'CostCenterCode', 'label':'CENTRO_CUSTO'},                                                                                  
+					                                                                                    {'field':'LastPurchasePrice', 'label':'ULTIMO_PRECO'}]
+					                                                                                    }" />
+												</div>
+											</td>
+											<td>
+												<div class="form-group" style="width: 500px;">
+													<input type="zoom" id="codproduto" name="codproduto"
+														data-zoom="{
+					                                                                                    'displayKey':'Code',
+					                                                                                    'datasetId':'ds_produtos',
+					                                                                                    'maximumSelectionLength':'1',
+					                                                                                    'placeholder':'Digite o código do produto',
+					                                                                                    'fields':[
+					                                                                                    {'field':'Code', 'label':'CODIGO'},
+					                                                                                    {'field':'Description', 'label':'DESCRICAO', 'standard':'true' },                                                                                    
+					                                                                                    {'field':'UnitOfMeasureCode', 'label':'UNIDADE_MEDIDA'},     
+																										{'field':'CostCenterCode', 'label':'CENTRO_CUSTO'},                                                                                  
+					                                                                                    {'field':'LastPurchasePrice', 'label':'ULTIMO_PRECO'}]
+					                                                                                    }" />
+												</div>
+											</td>
+											<td><input class="form-control money" name="quantidade"
+												id="quantidade" type="number" style="width: 100px;" min="1" />
+											</td>
+											<td><input class="form-control" name="unidademedida"
+												id="unidademedida" type="text" style="width: 100px;"
+												readonly /></td>
+
+											<td><input class="form-control money"
+												name="precounitario" id="precounitario" type="number"
+												style="width: 200px;" readonly/></td>
+											<td><input class="form-control money"
+												name="vltotalproduto" id="vltotalproduto" type="number"
+												style="width: 200px;" readonly /></td>
+
+											<td>
+												<div class="input-group date" style="width: 150px;">
+													<input type="text" class="form-control" id="dtnecessidade"
+														name="dtnecessidade" mask="00/00/0000" /> <span
+														class="input-group-addon"> <span
+														class="fluigicon fluigicon-calendar"></span>
+													</span>
+												</div>
+											</td>
+											<td>
+												<div class="form-group" style="width: 400px;">
+													<input type="hidden" id="codcentrocusto"
+														name="codcentrocusto"> <input type="zoom"
+														name="centrocusto" id="centrocusto"
+														data-zoom="{
+																				                                 'displayKey':'Code',
+																				                                 'datasetId':'ds_centrocusto',
+																				                                 'maximumSelectionLength':'1',
+																				                                 'placeholder':'Selecione o centro de custo',
+																				                                 'fields':[
+																				                                 {'field':'Code', 'label':'CODIGO', 'standard':'true'},
+																				                                 {'field':'Name', 'label':'DESCRICAO'}
+																				                                 ]}" />
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-md-12 fs-txt-right">
+							<button type="button" class="btn btn-primary" id="btn_add_item"
+								name="btn_add_item" onclick="adicionaProduto();">
+								<span class="fluigicon fluigicon-plus-sign fluigicon-sm"></span>
+								Adicionar produto
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="custom.js"></script>
+</body>
+</html>
