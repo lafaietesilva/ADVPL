@@ -2,8 +2,9 @@
 <html>
 
 <head>
-    <meta charset='utf-8' />
-    <title>Geração de Cotação - Proxxima</title>
+    <meta charset="windows-1252">
+	<meta charset="UTF-8">
+    <title>Geração de Cota&ccedil;&atilde;o - Proxxima</title>
   
     <style>
         .dados {
@@ -36,71 +37,77 @@
 
 <body>
     <div>
-        <h1>Cotação de Compras</h1>
+        <h1>Cota&ccedil;&atilde;o de Compras</h1>
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td colspan="4">Cota&ccedil;&atilde;o de Compras</td>
+                    </tr>
+                    <tr>
+                        <td class="lab">Empresa</td>
+                        <td class="dados">%cEmpresa%</td>
+                        <td class="lab">Filial</td>
+                        <td class="dados">%cFilial%</td>
+                    </tr>
+                    <tr>
+                        <td class="lab">Cota&ccedil;&atilde;o</td>
+                        <td class="dados">%cCotacao%</td>
+                        <td class="lab">Data da Emiss&atilde;o</td>
+                        <td class="dados">%cEmissao%</td>
+                    </tr>
+                    <tr>
+                        <td class="lab">Fornecedor</td>
+                        <td class="dados">%cFornecedor%</td>
+                        <td class="lab">Endere&ccedil;o</td>
+                        <td class="dados">%cEndereco%</td>
+                    </tr>
+                    <tr>
+                        <td class="lab">Condi&ccedil;&atilde;o</td>
+                        <td class="dados">%cCondicao%</td>
+                        <td ></td>
+                        <td ></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
         <table>
-            <tbody>
-            <tr>
-                <td colspan="4">Cotação de Compras</td>
-            </tr>
-            <tr>
-                <td class="lab">Empresa</td>
-                <td class="dados">%it.empresa%</td>
-                <td class="lab">Filial</td>
-                <td class="dados">%it.filial%</td>
-            </tr>
-            <tr>
-                <td class="lab">Cotação</td>
-                <td class="dados">%it.cotacao%</td>
-                <td class="lab">Data da Emissão</td>
-                <td class="dados">%it.emissao%</td>
-            </tr>
-            <tr>
-                <td class="lab">Fornecedor</td>
-                <td class="dados">%it.fornecedor%</td>
-                <td class="lab">Endereço</td>
-                <td class="dados">%it.endereco%</td>
-            </tr>
-            <tr>
-                <td class="lab">Condição</td>
-                <td class="dados">%it.condicao%</td>
-                <td ></td>
-                <td ></td>
-            </tr>
-            </tbody>
+            <div>
+                <tbody>
+                    <tr>
+                        <td colspan="7" >Itens para Cota&ccedil;&atilde;o</td>
+                    </tr>
+                    <tr>
+                        <td class="lab2">Item</td>
+                        <td class="lab2">Produto</td>
+                        <td class="lab2">Descri&ccedil;&atilde;o</td>
+                        <td class="lab2">Quantidade</td>
+                        <td class="lab2">Vlr. Unit&aacute;rio</td>
+                        <td class="lab2">Total</td>
+                        <td class="lab2">Prefer&ecirc;ncias</td>
+                    </tr>
+                    <tr>
+                        <td class="dados">%it.item%</td>
+                        <td class="dados">%it.produto%</td>
+                        <td class="dados">%it.descricao%</td>
+                        <td class="dados">%it.quantidade%</td>
+                        <td class="dados">%it.vlrunit%</td>
+                        <td class="dados">%it.total%</td>
+                        <td class="dados">%it.preferencia%</td>
+                    </tr>
+                </tbody>
+            </div>
         </table>
         <br>
         <table>
-            <tbody>
-            <tr>
-                <td colspan="7" >Itens para Cotação</td>
-            </tr>
-            <tr>
-                <td class="lab2">Item</td>
-                <td class="lab2">Produto</td>
-                <td class="lab2">Descrição</td>
-                <td class="lab2">Quantidade</td>
-                <td class="lab2">Vlr. Unitário</td>
-                <td class="lab2">Total</td>
-                <td class="lab2">Preferências</td>
-            </tr>
-            <tr>
-                <td class="dados">%it.item%</td>
-                <td class="dados">%it.produto%</td>
-                <td class="dados">%it.descricao%</td>
-                <td class="dados">%it.quantidade%</td>
-                <td class="dados">%it.vlrunit%</td>
-                <td class="dados">%it.total%</td>
-                <td class="dados">%it.preferencia%</td>
-            </tr>
-            </tbody>
-        </table>
-        <br>
-        <table>
-            <tbody>
-            <tr>
-                <th>Observações</th>
-            </tr>
-            </tbody>
+            <div>
+                <tbody>
+                    <tr>
+                        <th>Observa&ccedil;&otilde;es</th>
+                    </tr>
+                </tbody>
+            </div>
         </table>
         <textarea name="message" rows="4" cols="30">%it.observacao%</textarea>
     </div>
