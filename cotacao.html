@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <title>Geração de Cotação - Proxxima</title>
+  
+    <style>
+        .dados {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 200px;
+        }
+
+        .lab {
+            background-color: lightgray;
+            width: 150px;
+        }
+
+        .lab2 {
+            background-color: lightgray;
+            width: 200px;
+        }
+
+        h1 {
+            color: white;
+            background-color: #CD2784;
+            width: 1440px;
+        }
+        th{
+            color: darkblue;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Cotação de Compras</h1>
+        <table>
+            <tbody>
+            <tr>
+                <td colspan="4">Cotação de Compras</td>
+            </tr>
+            <tr>
+                <td class="lab">Empresa</td>
+                <td class="dados">%it.empresa%</td>
+                <td class="lab">Filial</td>
+                <td class="dados">%it.filial%</td>
+            </tr>
+            <tr>
+                <td class="lab">Cotação</td>
+                <td class="dados">%it.cotacao%</td>
+                <td class="lab">Data da Emissão</td>
+                <td class="dados">%it.emissao%</td>
+            </tr>
+            <tr>
+                <td class="lab">Fornecedor</td>
+                <td class="dados">%it.fornecedor%</td>
+                <td class="lab">Endereço</td>
+                <td class="dados">%it.endereco%</td>
+            </tr>
+            <tr>
+                <td class="lab">Condição</td>
+                <td class="dados">%it.condicao%</td>
+                <td ></td>
+                <td ></td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        <table>
+            <tbody>
+            <tr>
+                <td colspan="7" >Itens para Cotação</td>
+            </tr>
+            <tr>
+                <td class="lab2">Item</td>
+                <td class="lab2">Produto</td>
+                <td class="lab2">Descrição</td>
+                <td class="lab2">Quantidade</td>
+                <td class="lab2">Vlr. Unitário</td>
+                <td class="lab2">Total</td>
+                <td class="lab2">Preferências</td>
+            </tr>
+            <tr>
+                <td class="dados">%it.item%</td>
+                <td class="dados">%it.produto%</td>
+                <td class="dados">%it.descricao%</td>
+                <td class="dados">%it.quantidade%</td>
+                <td class="dados">%it.vlrunit%</td>
+                <td class="dados">%it.total%</td>
+                <td class="dados">%it.preferencia%</td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        <table>
+            <tbody>
+            <tr>
+                <th>Observações</th>
+            </tr>
+            </tbody>
+        </table>
+        <textarea name="message" rows="4" cols="30">%it.observacao%</textarea>
+    </div>
+</body>
+
+</html>
